@@ -215,15 +215,6 @@ article p {
       </nav>
     </div>
   </header>
-  <div class="newsletter">
-    <div class="container">
-      <h3>Like the Funion? Consider joining our newsletter!</h3>
-      <input type="text">
-      <!-- changed onfocus to onclick so that the function doesn't run until it is interacted with -->
-      <button type="button" onclick="getFocus()">Sign up</button></div>
-      
-    </div>
-  </div>
   <main class="container">
     <h2 class="offscreen">Top story</h2>
     <article class="main-story">
@@ -287,7 +278,17 @@ article p {
         </article>
       </div>
     </div>
-    
+    <!--Moved newsletter to the end of the HTML file to ensure logical navigation using the keyboard.-->
+    <div class="newsletter">
+    <div class="container">
+      <h3>Like the Funion? Consider joining our newsletter!</h3>
+      <input type="text">
+      <!-- changed onfocus to onclick so that the function doesn't run until it is interacted with -->
+      <button type="button" onclick="getFocus()">Sign up</button></div>
+      
+    </div>
+  </div>
+
   </main>
   <!--   stuff can be added here :)
   <footer>
