@@ -29,23 +29,35 @@
         <h1>Feedback form</h1>
       <form>
         <div class="control">
-          <label>Full name <span class="required">*</span></label><input id="name" name="name" type="text" />
+          <!-- added required and aria-required attributes-->
+          <!-- added for name -->
+          <label for="name">Full name<span class="required"></span></label><input id="name" name="name" type="text" required="required" aria-required="true"/>
         </div>
         <div class="control">
-          <label>Biography</label><textarea id="biography" name="biography" type="text"></textarea>
-          <span>Include examples on your skills in JavaScript.</span>
-        </div>
-        
-        <div>Gender</div>
-        <div class="control">
-          <input id="gender_male" name="gender" type="radio" value="male" /><label>Male</label>
-        </div>
-        <div class="control">
-          <input id="gender_female" name="gender" type="radio" value="female" /><label>Female</label>
+          <!-- added for="biography" -->
+          <!--removed span and added placeholder text so that screen reader would read it. It also looks much nicer-->
+          <label for="biography">Biography</label><textarea id="biography" name="biography" type="text" required="required" aria-required="true" placeholder="Include examples on your skills in JavaScript"></textarea>
         </div>
         
+        
+        <fieldset>
+          <legend>Gender</legend>
+          <div class="control">
+            <!--labeled gender_male-->
+            <!--makes sure that it's a required field-->
+            <input id="gender_male" name="gender" type="radio" value="male" required="required" aria-required="true"/><label for="gender_male">Male</label>
+          </div>
+          <div class="control">
+            <!--labeled gender_female-->
+            <!--makes sure that it's a required field-->
+            <input id="gender_female" name="gender" type="radio" value="female" required="required" aria-required="true"/><label for="gender_female">Female</label>
+          </div>
+        </fieldset>
+        
+        
         <div class="control">
-          <input id="accept_agbs" name="accept_agbs" type="checkbox" value="1" /><label>I accept the terms and conditions</label>
+          <!--labeled accept_agbs-->
+          <input id="accept_agbs" name="accept_agbs" type="checkbox" value="1" required="required" aria-required="true"/><label for ="accept_agbs">I accept the terms and conditions</label>
         </div>
         <div class="control">
           <input name="validate" type="hidden" value="1" /><input type="submit" value="Register" />
